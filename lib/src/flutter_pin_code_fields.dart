@@ -14,7 +14,9 @@ class PinCodeFields extends StatefulWidget {
 
   /// Padding within a field
   /// Default padding is EdgeInsets.only(bottom: 5.0)
-  final EdgeInsets padding;
+  final EdgeInsets defaultPadding;
+
+  final EdgeInsets Function(int index)? paddingBuilder;
 
   /// Height of the fields
   final double? fieldHeight;
@@ -123,7 +125,8 @@ class PinCodeFields extends StatefulWidget {
     this.length = 4,
     this.defaulMargin = const EdgeInsets.all(5.0),
     this.marginBuilder,
-    this.padding = const EdgeInsets.only(bottom: 5.0),
+    this.defaultPadding = const EdgeInsets.only(bottom: 5.0),
+    this.paddingBuilder,
     this.fieldHeight,
     this.fieldWidth,
     this.borderWidth = 2.0,
