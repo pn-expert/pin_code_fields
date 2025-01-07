@@ -161,7 +161,7 @@ class PinCodeFieldsState extends State<PinCodeFields> {
       duration: widget.animationDuration,
       margin: widget.marginBuilder == null
           ? widget.defaulMargin
-          : widget.marginBuilder(index),
+          : widget.marginBuilder!(index),
       padding: widget.padding,
       curve: widget.animationCurve,
       width: widget.responsive ? null : widget.fieldWidth,
