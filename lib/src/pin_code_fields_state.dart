@@ -159,7 +159,9 @@ class PinCodeFieldsState extends State<PinCodeFields> {
   Widget _generateTextField(int index) {
     return AnimatedContainer(
       duration: widget.animationDuration,
-      margin: widget.margin,
+      margin: widget.marginBuilder == null
+          ? widget.defaulMargin
+          : widget.marginBuilder(index),
       padding: widget.padding,
       curve: widget.animationCurve,
       width: widget.responsive ? null : widget.fieldWidth,

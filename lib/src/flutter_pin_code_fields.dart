@@ -8,7 +8,10 @@ class PinCodeFields extends StatefulWidget {
 
   /// Margin between the fields.
   /// Default margin is EdgeInsets.all(5.0)
-  final EdgeInsets margin;
+  final EdgeInsets defaulMargin;
+
+  final EdgeInsets Function(int index)? marginBuilder;
+
 
   /// Padding within a field
   /// Default padding is EdgeInsets.only(bottom: 5.0)
